@@ -1,0 +1,166 @@
+\subsection{Integración por Fracciones Parciales}
+
+La integración por fracciones parciales es una técnica útil para integrar funciones racionales. Aquí se presentan los cuatro casos principales:
+
+\subsection*{Caso 1: Factores Lineales Distintos}
+
+Para una función de la forma \(\frac{P(x)}{(x-a)(x-b)}\), donde \(a \neq b\):
+
+\[
+\frac{P(x)}{(x-a)(x-b)} = \frac{A}{x-a} + \frac{B}{x-b}
+\]
+
+Ejemplo:
+
+\[
+\int \frac{5x}{(x-1)(x+2)} \, dx
+\]
+
+Descomponemos en fracciones parciales:
+
+\[
+\frac{5x}{(x-1)(x+2)} = \frac{A}{x-1} + \frac{B}{x+2}
+\]
+
+Solucionamos para \(A\) y \(B\):
+
+\[
+5x = A(x+2) + B(x-1)
+\]
+
+Resolviendo el sistema de ecuaciones:
+
+\[
+\begin{cases}
+A + B = 0 \\
+2A - B = 5
+\end{cases}
+\]
+
+Encontramos que \(A = 1\) y \(B = -1\):
+
+\[
+\int \left( \frac{1}{x-1} - \frac{1}{x+2} \right) dx = \ln|x-1| - \ln|x+2| + C
+\]
+
+\subsection*{Caso 2: Factores Lineales Repetidos}
+
+Para una función de la forma \(\frac{P(x)}{(x-a)^n}\):
+
+\[
+\frac{P(x)}{(x-a)^n} = \frac{A_1}{x-a} + \frac{A_2}{(x-a)^2} + \cdots + \frac{A_n}{(x-a)^n}
+\]
+
+Ejemplo:
+
+\[
+\int \frac{3x^2}{(x-2)^3} \, dx
+\]
+
+Descomponemos en fracciones parciales:
+
+\[
+\frac{3x^2}{(x-2)^3} = \frac{A}{x-2} + \frac{B}{(x-2)^2} + \frac{C}{(x-2)^3}
+\]
+
+Solucionamos para \(A\), \(B\) y \(C\):
+
+\[
+3x^2 = A(x-2)^2 + B(x-2) + C
+\]
+
+Resolviendo el sistema de ecuaciones, obtenemos:
+
+\[
+A = 3, \quad B = 0, \quad C = 0
+\]
+
+Así,
+
+\[
+\int \frac{3}{x-2} \, dx = 3 \ln|x-2| + C
+\]
+
+\subsection*{Caso 3: Factores Cuadráticos Irreducibles Distintos}
+
+Para una función de la forma \(\frac{P(x)}{(x^2 + bx + c)(x^2 + dx + e)}\), donde los factores cuadráticos no tienen raíces reales:
+
+\[
+\frac{P(x)}{(x^2 + bx + c)(x^2 + dx + e)} = \frac{Ax + B}{x^2 + bx + c} + \frac{Cx + D}{x^2 + dx + e}
+\]
+
+Ejemplo:
+
+\[
+\int \frac{2x^3 + 3x}{(x^2 + 1)(x^2 + 4)} \, dx
+\]
+
+Descomponemos en fracciones parciales:
+
+\[
+\frac{2x^3 + 3x}{(x^2 + 1)(x^2 + 4)} = \frac{Ax + B}{x^2 + 1} + \frac{Cx + D}{x^2 + 4}
+\]
+
+Solucionamos para \(A\), \(B\), \(C\) y \(D\):
+
+\[
+2x^3 + 3x = (Ax + B)(x^2 + 4) + (Cx + D)(x^2 + 1)
+\]
+
+Resolviendo el sistema de ecuaciones, obtenemos:
+
+\[
+A = 2, \quad B = 1, \quad C = 0, \quad D = -1
+\]
+
+Así,
+
+\[
+\int \left( \frac{2x + 1}{x^2 + 1} + \frac{-1}{x^2 + 4} \right) dx = \int \frac{2x + 1}{x^2 + 1} \, dx - \int \frac{1}{x^2 + 4} \, dx
+\]
+
+\[
+= \ln|x^2 + 1| - \frac{1}{2} \arctan\left(\frac{x}{2}\right) + C
+\]
+
+\subsection*{Caso 4: Factores Cuadráticos Repetidos}
+
+Para una función de la forma \(\frac{P(x)}{(x^2 + bx + c)^n}\):
+
+\[
+\frac{P(x)}{(x^2 + bx + c)^n} = \frac{A_1x + B_1}{x^2 + bx + c} + \frac{A_2x + B_2}{(x^2 + bx + c)^2} + \cdots + \frac{A_nx + B_n}{(x^2 + bx + c)^n}
+\]
+
+Ejemplo:
+
+\[
+\int \frac{5x^2 + 3}{(x^2 + 1)^2} \, dx
+\]
+
+Descomponemos en fracciones parciales:
+
+\[
+\frac{5x^2 + 3}{(x^2 + 1)^2} = \frac{Ax + B}{x^2 + 1} + \frac{Cx + D}{(x^2 + 1)^2}
+\]
+
+Solucionamos para \(A\), \(B\), \(C\) y \(D\):
+
+\[
+5x^2 + 3 = (Ax + B)(x^2 + 1) + Cx + D
+\]
+
+Resolviendo el sistema de ecuaciones, obtenemos:
+
+\[
+A = 0, \quad B = 5, \quad C = 0, \quad D = -2
+\]
+
+Así,
+
+\[
+\int \left( \frac{5}{x^2 + 1} - \frac{2}{(x^2 + 1)^2} \right) dx = 5 \arctan(x) - \int \frac{2}{(x^2 + 1)^2} \, dx
+\]
+
+\[
+= 5 \arctan(x) + \frac{x}{x^2 + 1} + C
+\]

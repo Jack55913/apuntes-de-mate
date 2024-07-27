@@ -1,22 +1,238 @@
+\begin{problem}[Integración por cambio de variable]
+    \begin{equation*}
+        \int \sin^3{x}\,dx
+    \end{equation*}
+    \textit{ Sol. }
+    \begin{align*}
+        \int \sin^3{x}\,dx
+    \end{align*}
+    Factorizamos el Seno, de tal forma:
+    \begin{align*}
+        &\int \sin{x}\cdot \sin^2{x}\,dx  =  \int \sin{x}\cdot \left(1 -\cos^2{x}\right)\\
+        &\int \sin {x}\,dx + \int{\cos^2{x}\cdot -\sin{x}}\,dx
+    \end{align*}
+    Haciendo un cambio de variable, obtenemos:
+    \begin{align*}
+        &u = \cos{x}\\
+        &du = -\sin{x}\,dx 
+    \end{align*}
+    Sustituyendo valores:
+    \begin{align*}
+        - \cos{x} + \int u^2\,du = -\cos{x} + \frac{1}{3}\cos^3{x} + c
+    \end{align*}
+    Solución:
+    \begin{equation*}
+        \therefore -\cos{x} + \frac{1}{3}\cos^3{x} + c
+    \end{equation*}
+    
+\end{problem}
+
+
+\begin{problem}[Cambio de variable]
+    \begin{equation*}
+        \int \cos{x}\,dx
+    \end{equation*}
+\textit{ Sol. }
+\begin{align*}
+    &\int \cos{x}\,dx =\int \cos{x} \cdot  \cos^2{x}\,dx\\
+    &=\int \cos{x}\left(1 - \sin^2{x}  \right)\,dx\\
+    &=\int \cos{x}\, dx - \int \cos{x} \sin^2{x}  
+\end{align*}
+Aplicando cambio de variable
+\begin{align*}
+    &u = \sin{x}\\
+    &du = \cos{x}\,dx
+\end{align*}
+Resolviendo: 
+\begin{align*}
+    &\sin{x} - \int u^2\,du\\
+    &= \sin{x} - \frac{u^3}{3} + c \\
+    &= \sin {x} - \frac{\sin^3{x}}{3}\, dx 
+\end{align*}
+\textit{ Sol. }
+\begin{equation}
+    \therefore \sin {x} - \frac{\sin^3{x}}{3}\, dx 
+\end{equation}
+\end{problem}
+
+
+\begin{problem}[Cambio de variable]
+    \begin{equation}
+        \left(\tan{x}\sec{x}\right)^2\,dx
+    \end{equation}
+Aplicando leyes de los signos:
+\begin{align*}
+    \left(\tan{x}\sec{x}\right)^2\,dx = \int \tan^2{x}\sec^2{x}\,dx = \int u^2\,du\\
+\end{align*}
+aplicando cambio de variable:
+\begin{align*}
+    &u = \tan{x}\\
+    &du = \sec^2{x}\,dx 
+\end{align*}
+
+\begin{align*}
+    \frac{u^3}{3} + c = \frac{\tan^3{x}}{3} + c 
+\end{align*}
+
+\end{problem}
+
+\begin{problem}[Cambio de variable]
+    \begin{equation}
+        \int \frac{\ln{x}}{x}\,dx 
+    \end{equation}
+    \textit{ Sol. }
+
+\begin{align*}
+    u = ln{x}\\
+    du = \frac{1}{x}\,dx
+\end{align*}
+
+\begin{align*}
+    \int u\,du = \frac{u^2}{2} + c 
+\end{align*}
+\begin{equation*}
+    \therefore = \frac{\ln^2{x}}{2} + c
+\end{equation*}
+\end{problem}
+
+
+
+\begin{problem}[Integración por sustitución]
+    \begin{equation}
+        \int \left(\sqrt{x} - \sqrt[3]{x} \right)^{3}\, dx
+    \end{equation}
+    \textit{ Sol. }
+Según las leyes de los binomios al cubo, se desarrolla:
+\begin{align*}
+    &\left(a - b\right)^3 = a^3 - 3a^2b + 3ab^2 - b^3\\
+    &\left(\sqrt{x} - \sqrt[3]{x}\right)^3 = x^{\frac{3}{2}} + 3x \cdot x^{\frac{1}{3}} + 3x^{\frac{1}{2}} \cdot x^{\frac{2}{3}} - x\\ 
+    &= x^{\frac{3}{2}} + 3x^{\frac{4}{3}} + 3x^{\frac{7}{6}} - x
+\end{align*}
+Separando en cuatro integrales:
+    \begin{align*}
+        &I = \int x^{\frac{3}{2}}\,dx + \int 3x^{\frac{4}{3}}\,dx + \int 3x^{\frac{7}{6}}\,dx - \int x\,dx\\
+        &\frac{2}{5}x^{\frac{5}{2}} - 3 \left(\frac{3}{7}\right)  + 3\left(\frac{6}{13}\right)x^{\frac{13}{6}} \frac{1}{2}x^2 + c\\
+        &= \frac{2}{5} \sqrt{x^5} - \frac{9}{7}\sqrt[3]{x^7} + \frac{18}{13} \sqrt[6]{x^{13}} - \frac{1}{2}\sqrt{x} + c
+    \end{align*}
+\end{problem}
+
+
+\begin{problem}[Integración por sustitución]
+    \begin{equation}
+        \int \left(1 - 3x\right)^{ - \frac{3}{2}} \, dx
+    \end{equation}
+\end{problem}
+
+\begin{problem}[Integración por partes]
+    \begin{equation}
+        \int x^2e^{- 2x} \, dx
+    \end{equation}
+Esta integral es de la forma:
+\begin{equation*}
+    \int x^2e^{- 2x} \, dx = \int u\,du = uv -\int u\, du
+\end{equation*}
+haciendo un cambio de variable:
+\begin{align*}
+    &u = x^2&& du = e^{ - 2}x\,dx\\
+    &du = 2x\,dx&& u = - \frac{1}{2}e^{ - 2x}
+\end{align*}
+Sustituyendo: 
+\begin{align*}
+    = x^2\left( - \frac{1}{2}e^{ -2x} \right) + \frac{1}{2} \int e^{- 2x}\cdot 2x\,dx\\
+    = - \frac{1}{2}x^2e^{ - 2x} +\int x\cdot e^{- 2x}\,dx
+\end{align*}
+Aplicando un nuevo cambio de variable, obtenemos:
+\begin{equation*}
+    J = \int x \cdot e^{- 2x}\, dx
+\end{equation*}
+\begin{align*}
+    &u = x&& dv = e^{ - 2x}\, dx\\
+    &du = dx&& v = - \frac{1}{2}e^{- 2x}
+\end{align*}
+Se obtiene la nueva ecuación:
+\begin{align*}
+    J = \left( - \frac{x}{2}e^{- 2x} \right) + \int \frac{1}{2}e^{ - 2x}\, dx\\
+    J = \left( - \frac{x}{2}e^{ - 2x} \right) + \frac{1}{2}\int e^{ - 2x}\, dx\\
+    J =\left( - \frac{x}{2}e^{- 2x}\right) + \frac{1}{2}\left(- \frac{1}{2}\right)e^{- 2x} + c
+\end{align*}
+Volviendo a la I:
+\begin{align*}
+    = - \frac{1}{2}x^2e^{- 2x} - \frac{x}{2}e^{ - 2x} - \frac{1}{4} e^{ - 2x} + c\\
+    \therefore I = -\frac{1}{2}e^{ - 2x}\left(x^2 + x + \frac{1}{2} \right)
+\end{align*}
+\end{problem}
 
 
 
 
+\begin{problem}[Integración por parciales]
+    \begin{equation}
+        \int \frac{x^2-2}{x^3 - 4x}\,dx
+    \end{equation}
+
+    \textit{ Sol. }
+
+    \begin{align*}
+        &\int \frac{x^2-2}{x\left(x^2 - 4\right)}\,dx = \int \frac{x^2 -2}{x\left(x - 2\right)\left(x + 2\right)}\,dx\\
+        &x^2- 2 = \frac{A}{x} + \frac{B}{x - 2} + \frac{C}{x + 2}\left(x(x - 2)(x +2)\right)\\
+        &x^2 - 2 = A\left( (x - 2)(x +2) \right) + B \left(x(x + 2)\right) + C\left(x(x - 2)\right)\\ 
+    \end{align*}
+Con x=2
+\begin{align*}
+    (2)^2 - 2 = B\left(2(2 + 2)\right)
+\end{align*}
+Entonces 2= 8B y $B= \frac{1}{4}$
+\begin{align*}
+    (- 2)^2- 2 = C\left(x(x - 2)\right)\\
+\end{align*}
+Se obtiene que 2=8C y $C=\frac{1}{4}$ pero x=0
+\begin{align*}
+    - 2 = A(0 - 2)(0 + 2)
+\end{align*}
+y - 2 = - 4A, entonces $A =\frac{1}{2}$; La integral queda como:
+\begin{align*}
+    &\int \left( \frac{\frac{1}{2}}{x} + \frac{\frac{1}{4}}{x - 2} +\, \frac{\frac{1}{4}}{x + 2}\right)\\
+    &\frac{1}{2 }\int \frac{\frac{1}{2}}{x} + \frac{1}{4}\int \frac{dx}{x - 2} +\, \frac{1}{4}\int \frac{dx}{x + 2}\\
+    &\therefore\frac{1}{2}\ln{x} + \frac{1}{4}\ln{x - 2} + \frac{1}{4}\ln{x + 2} + c
+\end{align*}
+\end{problem}
+
+\begin{problem}[a]
+    Área entre la curva $y=\left\lvert 3x-6\right\rvert,x=-1, x=4 $
+
+    \textit{ Sol. }
+
+
+\end{problem}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+\begin{problem}[a]
+    \begin{equation}
+        I = \int e^x\cos^2{e^x} \cdot \sin{e^x}\,dx 
+    \end{equation}
+    Aplicando cambio de variable:
+    \begin{align*}
+        &u = e^x\\ 
+        &du = e^x\, dx
+    \end{align*}
+    Sustituyendo
+    \begin{align*}
+    I = \int u \cdot \cos^2{u} \sin{u}  \,du\\
+    \end{align*}
+    Volviendo a hacer un cambio de variable,
+\begin{align*}
+    &z = \cos{u}\\
+    &dz = \sin{u}\, du
+\end{align*}
+Sustituyendo:
+\begin{align*}
+    &J = - \int z^2\, dz\\
+    &J = - \frac{z^3}{3} + c\\
+    &I = \frac{\cos^3{u}}{3} + c \\
+    &I = - \frac{\cos^3{e^x}}{3} + c
+\end{align*}
+\end{problem}
 
 
 

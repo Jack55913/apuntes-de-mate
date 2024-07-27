@@ -10,6 +10,7 @@
 %----------------------------------------------------------------------------------------
 %	MATHS PACKAGES
 %----------------------------------------------------------------------------------------
+\usepackage{matlab-prettifier}
 \usepackage[makestderr]{pythontex}
 \restartpythontexsession{\thesection}
 \usepackage{gensymb}
@@ -677,6 +678,11 @@ addtohook={%
 \usetikzlibrary{arrows}
 \pagestyle{empty}
 \usepackage{pgfplots}
+\usepgfplotslibrary{fillbetween}
+\pgfplotsset{compat=1.16}
+% \pgfplotsset{compat=1.8}
+% \pgfplotsset{compat=newest}
+
 \usetikzlibrary{calc,fadings,decorations.pathreplacing}
 
 \def\scl{0.6}
